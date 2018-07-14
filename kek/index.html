@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Ziga</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<style>
+	body, html {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+		.main{
+			width: 100%;
+			height: 681px;
+			z-index: -10;
+			background-image: url(bg.jpg);
+			
+			
+			
+		}
+		#s-one, #s-two, #s-three{
+			display: block;
+			width: 100%;
+			height: 681px;
+		}
+	
+		.mouse-bg {
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			top: 0px;
+			position: absolute;
+		}
+		.second{
+			width: 100%;
+			height: 500px;
+			z-index: 10000;
+			margin-top: -10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="main">
+		
+		<img id="s-one" class="mouse-bg" src="s-one.png" alt="">
+		<img id="s-two" class="mouse-bg" src="s-two.png" alt="">
+		<img id="s-three" class="mouse-bg" src="s-three.png" alt="">
+		
+	</div>
+	<div class="second"></div>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="mouse.parallax.js"></script>
+<script>
+$(document).ready(function() {
+				$('#s-one').mouseParallax({ moveFactor: 1 });
+				$('#s-two').mouseParallax({ moveFactor: 15 });
+				$('#s-three').mouseParallax({ moveFactor: 30 });
+				
+			});
+</script>
+</body>
+</html>
