@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Ziga</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<style>
+	body, html {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+		.main{
+			width: 100%;
+			height: 681px;
+			z-index: -10;
+			background-image: url(bg.jpg);
+			
+			
+			
+		}
+		#s-one, #s-two, #s-three{
+			display: block;
+			width: 80%;
+			height: 681px;
+		}
+	
+		#s-one {
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			top: 0px;
+			position: absolute;
+		}
+		#s-two {
+			left: 200px;
+			right: 0px;
+			bottom: 0px;
+			top: 0px;
+			position: absolute;
+		}
+		#s-three {
+			left: 0px;
+			right: 70px;
+			bottom: 0px;
+			top: 0px;
+			position: absolute;
+		}
+		.second{
+			width: 100%;
+			height: 500px;
+			z-index: 10000;
+			margin-top: -10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="main">
+		
+		<img id="s-one"  src="s-one.png" alt="">
+		<img id="s-two"  src="s-two.png" alt="">
+		<img id="s-three"  src="s-three.png" alt="">
+		
+		
+	</div>
+	<button id="kek">kek</button>
+
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src="jquery-parallax.js"></script>
+<script>
+		$( document ).mousemove( function( e ) {
+			$( '#s-one' ).parallax( -30, e );
+			$( '#s-two' ).parallax( 10, e );
+			$( '#s-three' ).parallax( 20, e );
+		});
+	</script>
+</body>
+</html>
